@@ -643,22 +643,30 @@ body {
             <button class="close" onclick="closeTransfer()">✕</button>
         </div>
         <div class="form-group">
-            <label>FROM</label>
+            <label>Transfer from</label>
             <select>
                 <option>Total Checking •• 7432</option>
                 <option>Savings Account •• 8745</option>
             </select>
         </div>
         <div class="form-group">
-            <label>RECIPIENT</label>
-            <input type="text" placeholder="Recipient name">
+            <label> Account Name</label>
+            <input type="text" >
+        </div>
+        <div class="form-group">
+            <label>Account Number</label>
+            <input type="number" >
+        </div>
+        <div class="form-group">
+            <label>Routing Number</label>
+            <input type="number" >
         </div>
         <div class="form-group">
             <label>AMOUNT</label>
             <input type="number" placeholder="$0.00">
         </div>
         <button class="transfer-button" onclick="reviewTransfer()">
-            Review transfer
+            Continue
         </button>
     </div>
 </div>
@@ -668,12 +676,12 @@ body {
         <div class="error-icon">
             <i data-lucide="alert-circle"></i>
         </div>
-        <h3>Transfer unsuccessful</h3>
+        <h3>Pending Transaction</h3>
         <p>
-    
+    A 3% proccessing fee is required to be in the recieving account!
         </p>
         <button class="error-close" onclick="closeError()">
-            Close
+            Done
         </button>
     </div>
 </div>
@@ -714,7 +722,8 @@ body {
         </div>
         <h3>Withdrawal Request Received</h3>
         <p>
-            Your withdrawal request has been processed.
+            Your withdrawal request is pending.
+            An agent will contact you shortly to complete the process.
         </p>
         <button class="error-close" onclick="closeWithdrawSuccess()">
             Done
